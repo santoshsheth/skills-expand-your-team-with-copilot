@@ -12,7 +12,7 @@ router = APIRouter(
     prefix="/activities",
     tags=["activities"]
 )
-
+@router.get(".", response_model=Dict[str, Any])
 @router.get("", response_model=Dict[str, Any])
 @router.get("/", response_model=Dict[str, Any])
 def get_activities(
